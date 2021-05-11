@@ -6,6 +6,7 @@ import Registro from '../pages/registro'
 import Home from '../pages/home'
 import NotFound from '../components/NotFound'
 import PrivateRoute from './PrivateRoute'
+import consultamusica from '../consultaMusica/view/consultamusica'
 
 import { history } from '../history'
 
@@ -14,7 +15,7 @@ const Routes = () => (
                 <Switch>
                         <Route component={Login} exact path="/login"/>
                         <Route component={Registro} exact path="/registro"/>
-                        <PrivateRoute component={Home} exact path="/"/>
+                        <PrivateRoute component={consultamusica} exact path="/"/>
                         <PrivateRoute component={NotFound}/>
                 </Switch>
         </Router>
