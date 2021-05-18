@@ -29,10 +29,12 @@ const Login = () => {
             <Formik initialValues={{}} onSubmit={handleSubmit} validationSchema={validations}>
                 <Form className="Login">
                     <div className="Login-group">
+                        <label className="Login-Label">E-mail:</label>
                         <Field  name = "email" className="Login-Field"/>
                         <ErrorMessage component="span" name ="email" className="Login-Error"/>
                     </div>
                     <div className="Login-group">
+                        <label className="Login-Label">Senha:</label>
                         <Field  name = "password" className="Login-Field"/>
                         <ErrorMessage component="span" name ="password" className="Login-Error"/>
                     </div>
@@ -41,7 +43,6 @@ const Login = () => {
             </Formik>
             </>)
     }
-    
 
 
 export default Login

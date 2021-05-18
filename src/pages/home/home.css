@@ -1,122 +1,35 @@
-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background: rgb(239, 239, 239);
-    background: radial-gradient(circle, rgba(239, 239, 239, 1) 77%, rgba(229, 255, 131, 1) 95%, rgba(204, 255, 0, 1) 100%);
+.Home-Field{
+border: none;
+background: rgba(0, 0, 0, .25);
+    color: #fdfdfd;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    font-size: 1.2rem;
+    border-radius: 7px;
+    width: 100%;
+    transition: all .1s linear;
 }
 
-#corpo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
+.Home-Field:focus{
+    box-shadow: 0 4px 4px rgba(0, 0, 0, .5);
+    outline: none;
 }
 
-#divResultado {
-    width: 60%;
-    display: flex;
-    justify-content: space-between;
+.Home-Error{
+    color: #ff8888;
 }
 
-#divCreditos {
-    align-self: flex-end;
+.Home-Btn {
+    background: #00cc99;
+    color: #fdfdfd;
+    padding: .5rem 2rem;
+    border: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+    margin-right: 2rem;
 }
 
-@media (max-width: 880px) {
-    #divResultado {
-        flex-direction: column;
-        align-items: center;
-    }
-    #divLetra {
-        width: 50%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    #divBandaAlbum {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 50%;
-    }
-}
-
-@media (min-width: 880px) {
-    #divLetra {
-        width: 56.4rem;
-    }
-    #divBandaAlbum {
-        width: 26.5rem;
-    }
-}
-
-#divAlbum {
-    margin-top: 2em;
-}
-
-#txtAlbum {
-    font-size: 25px;
-    margin-top: 0px;
-    color: #CCFF00;
-}
-
-#txtTituloAlbum {
-    font-size: 20px;
-    margin-bottom: 0px;
-}
-
-#txtTituloAlbumAno {
-    font-size: 20px;
-    margin-bottom: 0px;
-}
-
-#txtAlbumAno {
-    margin-top: 0px;
-}
-
-#txtTituloLetra {
-    font-size: 55px;
-    color: #CCFF00;
-}
-
-#txtTituloImagem {
-    margin-top: 0px;
-    font-size: 45px;
-    color: #CCFF00;
-}
-
-h1 {
-    display: flex;
-    color: #CCFF00;
-}
-
-.erroVermelho {
-    color: red;
-}
-
-.botaoInput {
-    height: 21px;
-    margin-top: 15px;
-}
-
-.divInput {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-}
-
-#labelMusica {
-    margin-top: 15px;
-    padding-left: 20px;
-}
-
-#divBotaoInput {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-#divBtnVoltar {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+.Home-Btn:hover{
+    cursor: pointer;
 }

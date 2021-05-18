@@ -1,0 +1,65 @@
+#head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#corpo {
+    display: flex;
+    justify-content: space-between;
+}
+.Home-Btn {
+    background: #00cc99;
+    color: #fdfdfd;
+    padding: .5rem 2rem;
+    border: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+    margin-right: 2rem;
+}
+
+#infos {
+    width: 50%;
+}
+
+#letra {
+    width: 50%;
+}
+
+#txtArtist {
+    margin-top: 0px;
+    font-size: 45px;
+    color: #CCFF00;
+}
+
+#txtTituloAlbum {
+    font-size: 20px;
+    margin-bottom: 0px;
+}
+
+#txtAlbum {
+    font-size: 25px;
+    margin-top: 0px;
+    color: #CCFF00;
+}
+
+
+#txtTituloAlbumAno {
+    font-size: 20px;
+    margin-bottom: 0px;
+}
+
+#txtAlbumAno {
+    margin-top: 0px;
+}
+
+#txtTituloLetra {
+    font-size: 55px;
+    color: #CCFF00;
+}
+
+#txtTituloImagem {
+    margin-top: 0px;
+    font-size: 45px;
+    color: #CCFF00;
+}
