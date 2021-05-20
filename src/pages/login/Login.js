@@ -13,7 +13,8 @@ const Login = () => {
         .then(resp => {
             const {data} = resp
             if (data){
-                localStorage.setItem('app-token', data)
+                localStorage.setItem('app-token', data.token)
+                localStorage.setItem('user-role', data.role)
                 history.push('/')
             }
         })
@@ -41,6 +42,7 @@ const Login = () => {
                     <button className="Login-Btn" type="submit">Login</button>
                 </Form>
             </Formik>
+            <button className="Login-Btn" onClick = {() => history.push('/registro')}>Registre-se</button>
             </>)
     }
 

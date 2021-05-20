@@ -8,6 +8,7 @@ import Song from '../pages/song'
 import Post from '../pages/post'
 import NotFound from '../components/NotFound'
 import PrivateRoute from './PrivateRoute'
+import PrivateRouteAdmin from './PrivateRouteAdmin'
 
 
 
@@ -20,7 +21,7 @@ const Routes = () => (
                         <Route component={Registro} exact path="/registro"/>
                         <PrivateRoute component={Song} exact path="/song"/>
                         <PrivateRoute component={Home} exact path="/"/>
-                        <PrivateRoute component={Post} exact path="/post"/>
+                        <PrivateRouteAdmin  component={Post} exact path="/post"/>
                         <PrivateRoute component={NotFound}/>
                 </Switch>
         </Router>

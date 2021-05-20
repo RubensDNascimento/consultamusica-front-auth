@@ -14,7 +14,7 @@ const Home = () => {
         .then(resp => {
             console.log(resp)
             const {data} = resp
-            if (data){
+            if (resp.status==200){
                 history.push({
                     pathname: '/song',
                     state: {
@@ -23,19 +23,28 @@ const Home = () => {
                         album: data.album,
                         year: data.year,
                         lyrics: data.lyrics,
-                        translation: data.Translation
+                        translation: data.Translation,
+                        picture: data.picture
                     }
                 });
             }
         })
     }
 
+    const logout = () =>{
+        localStorage.removeItem('user-role')
+        localStorage.removeItem('app-token')
+        history.push('/') 
+    }
+    
+    const isAdmin = localStorage.getItem('user-role') === 'admin';
     const validations = yup.object().shape({
         artist: yup.string().required().min(2),
         songName: yup.string().required().min(2)
     })
         return (
             <>
+            
             <h1>Consulta Musica</h1>
             <p>Preencha os dados:</p>
             <Formik initialValues={{}} onSubmit={handleSubmit} validationSchema={validations}>
@@ -55,8 +64,8 @@ const Home = () => {
                     <button className="Home-Btn" type="reset">Limpar</button>
                 </Form>
             </Formik>
-            
-            <button className="Login-Btn" onClick = {() => history.push('/post')}>Nova Musica</button>
+            <button className="Login-Btn" onClick = {logout}>Logout</button>
+            {isAdmin && <button className="Login-Btn" onClick = {() => history.push('/post')}>Nova Musica</button>}
             </>)
     }
 

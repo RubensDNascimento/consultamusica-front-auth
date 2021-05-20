@@ -1,3 +1,8 @@
+.body{
+    
+    display: flex;
+}
+
 #head {
     display: flex;
     flex-direction: column;
@@ -7,6 +12,9 @@
 #corpo {
     display: flex;
     justify-content: space-between;
+    margin: 0%;
+    padding: 0%;
+    width: 900px;
 }
 .Home-Btn {
     background: #00cc99;
@@ -62,4 +70,11 @@
     margin-top: 0px;
     font-size: 45px;
     color: #CCFF00;
+}
+
+#imgArtist{
+    border: 1px solid #ddd; /* Gray border */
+  border-radius: 4px;  /* Rounded border */
+  padding: 5px; /* Some padding */
+  width: 90%; /* Set a small width */
 }
