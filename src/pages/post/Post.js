@@ -24,7 +24,7 @@ const Post = () => {
             console.log(key[0] + ', ' + key[1]);
         }
         console.log(imagefile)
-        axios.post('http://localhost:8080/v1/api/uploads', forms, {
+        axios.post(process.env.REACT_APP_API_URL + '/v1/api/uploads', forms, {
             headers: {
                 'Content-Type': 'multipart/form-data'
             }

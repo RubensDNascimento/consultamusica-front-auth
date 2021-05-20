@@ -10,7 +10,7 @@ import './home.css'
 
 const Home = () => {
     const handleSubmit = values => {
-        axios.post('http://localhost:8080/v1/api/search', values)
+        axios.post(process.env.REACT_APP_API_URL + 'v1/api/search', values)
         .then(resp => {
             console.log(resp)
             const {data} = resp
