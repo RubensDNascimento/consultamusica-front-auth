@@ -11,7 +11,7 @@ import '../login/Login.css'
 
 const Registro = () => {
     const handleSubmit = values => {
-        axios.post(process.env.REACT_APP_API_URL + '/v1/api/user', values)
+        axios.post('http://localhost:8080/v1/api/user', values)
             .then(resp => {
                 const { data } = resp
                 if (data) {
